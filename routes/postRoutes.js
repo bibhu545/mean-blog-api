@@ -16,7 +16,7 @@ const storage = multer.diskStorage({
         cb(null, file.originalname)
     }
 })
-const upload = multer({ storage: storage }).single('ckfile');
+const upload = multer({ storage: storage }).single('upload');
 
 Router.post('/ckupload', (req, res, next) => {
     upload(req, res, function (err) {
