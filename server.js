@@ -18,7 +18,7 @@ const app = express();
 app.use(express.json());
 app.use(morgan('dev'));
 app.use(cors());
-app.use('/uploads/ckeditor', express.static(__basedir + '/uploads/ckeditor'));
+app.use('/uploads/ckeditor', express.static(__dirname + '/assets/uploads/ckeditor'));
 app.use('/categories', categoryRoutes);
 app.use('/account', accountRoutes);
 app.use('/post', postRoutes);
